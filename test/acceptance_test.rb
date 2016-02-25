@@ -1,8 +1,6 @@
-   require 'Open3'
+require 'open3'
 
 class NotesTest < Minitest::Test
-
-
 
   def test_it_displays_notes_by_default_with_open_3
 
@@ -27,7 +25,6 @@ assert exitstatus.success?
 assert_equal expected, stdout
 
   end
-
 end
 
 

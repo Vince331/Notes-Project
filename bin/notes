@@ -1,8 +1,5 @@
 #!/usr/bin/env ruby
 
-
-
-
 puts 'Add 1 to 2    1 + 2  # => 3
 Subtract 5 from 2    2 - 5  # => -3
 Is 1 less than 2    1 < 2  # => true
