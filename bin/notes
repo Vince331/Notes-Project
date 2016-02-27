@@ -1,13 +1,9 @@
-::::::#!/usr/bin/env ruby
+#!/usr/bin/env ruby
 
-<<<<<<< HEAD
 word_to_search =  ARGV[0]
 
 
 string = 'Add 1 to 2    1 + 2  # => 3
-=======
-puts 'Add 1 to 2    1 + 2  # => 3
->>>>>>> dongmin
 Subtract 5 from 2    2 - 5  # => -3
 Is 1 less than 2    1 < 2  # => true
 Is 1 equal to 2    1 == 2 # => 3
