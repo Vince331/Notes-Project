@@ -1,0 +1,15 @@
+1. Commit the things you currently have
+2. Move `arg_scanner` into the lib directory
+   * this will require you to make a file there
+   * and copy the method into it
+   * eg: https://github.com/JoshCheek/seeing_is_believing/blob/00d0651b4ae2adce9e15c832aa503c69ef74f75a/bin/seeing_is_believing#L3-L5
+   * and set the `$LOAD_PATH` in the bin directory
+   * and require the file from lib
+   * and then commit ;)~
+3. You're going to need to come up with a different structure to store your notes in.
+   * Change the structure to something you think can handle the information now,
+     before updating the unit tests.
+   * Run the tests, see that they all work
+   * commit ;)
+4. Then change the unit tests (keep one test as an acceptance test)
+   to call the method instead of invoking the binary.
