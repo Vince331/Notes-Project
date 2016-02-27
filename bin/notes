@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+$LOAD_PATH.unshift File.realdirpath '../../lib', __FILE__
+require 'arg_scanner'
 word_to_search =  ARGV[0]
 
 
@@ -17,16 +19,16 @@ Access an element in an array by its index    ["a","b","c"][0] # => "a"
 Find out how big the array is    ["a","b"].length # => 2
 '
 
-def arg_scanner(string, word_to_search)
-  if word_to_search == nil
-    return string
-    #regex
-  else
-    match = string[/.*#{word_to_search}.*/i]
-    return match
-  end
-end
-puts arg_scanner(string, word_to_search)
+#def arg_scanner(string, word_to_search)
+#  if word_to_search == nil
+#    return string
+#    #regex
+#  else
+#    match = string[/.*#{word_to_search}.*/i]
+#    return match
+#  end
+#end
+ArgScanner.new.arg_scanner(string, word_to_search)
 #hi = 3
 #def display_arg(thing)
 
