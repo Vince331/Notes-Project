@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 require 'Open3'
+=======
+require 'open3'
+>>>>>>> dongmin
 
 # Add our bin directory to the PATH so that we can
 # run `notes` wiwthout specifying where to look.
@@ -6,11 +10,15 @@ bin_dir     = File.expand_path('../../bin', __FILE__)
 ENV['PATH'] = bin_dir + ":" + ENV['PATH']
 #stdout, stderr, exitstatus = Open3.capture3(bin_dir)
 
+<<<<<<< HEAD
 class NotesTest < Minitest::Test
 #  def test_it_displays_notes_by_default_with_open_3
 
 
    #  def test_it_displays_notes_by_default_with_open_3
+=======
+  def test_it_displays_notes_by_default_with_open_3
+>>>>>>> dongmin
 
 expected = 'Add 1 to 2    1 + 2  # => 3
 Subtract 5 from 2    2 - 5  # => -3
@@ -45,7 +53,11 @@ def test_first
    # require "pry"
    # binding.pry
   end
+<<<<<<< HEAD
 
+=======
+end
+>>>>>>> dongmin
 
   def test_it_selects_notes_whose_descriptions_matches_an_argument_from_the_command_line # < Vari
 
