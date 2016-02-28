@@ -2,7 +2,10 @@
 
 $LOAD_PATH.unshift File.realdirpath '../../lib', __FILE__
 require 'arg_scanner'
-word_to_search =  ARGV[0]
+
+
+
+word_to_search =  ARGV
 
 
 string = ['Add 1 to 2    1 + 2  # => 3',
