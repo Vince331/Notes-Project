@@ -38,12 +38,23 @@ class ArgScanner
     if container1.empty? == false and container2.empty? == false
       j = 0
       final = []
-      while j < container1.length
-        if container1.include?(container2[j])
-          final << container2[j]
+
+      container2.each do |x|
+        if container1.include?(x)
+          final << x
         end
-        j+=1
       end
+
+
+
+
+     # while j < container1.length
+     #   if container1.include?(container2[j])
+     #     final << container2[j]
+     #   end
+     #   j+=1
+     # end
+      #
 
       return final.join(",")
     else

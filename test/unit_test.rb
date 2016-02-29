@@ -1,11 +1,11 @@
 #require 'Open3'
 require 'arg_scanner'
-gem 'minitest', '~> 5.2'
+#gem 'minitest', '~> 5.2'
 
 # Add our bin directory to the PATH so that we can
 # run `notes` wiwthout specifying where to look.
-#lib_dir     = File.expand_path('../../lib', __FILE__)
-#ENV['PATH'] = lib_dir + ":" + ENV['PATH']
+lib_dir     = File.expand_path('../../lib', __FILE__)
+ENV['PATH'] = lib_dir + ":" + ENV['PATH']
 #stdout, stderr, exitstatus = Open3.capture3(bin_dir)
 
 class NotesTest < Minitest::Test
