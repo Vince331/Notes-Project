@@ -3,6 +3,7 @@
 $LOAD_PATH.unshift File.realdirpath '../../lib', __FILE__
 require 'arg_scanner'
 
+class Notes
 
 
 word_to_search =  ARGV
@@ -33,7 +34,7 @@ string = ['Add 1 to 2    1 + 2  # => 3',
 ArgScanner.new.arg_scanner(string, word_to_search)
 #hi = 3
 #def display_arg(thing)
-
+end
 #puts regex
 
 #end

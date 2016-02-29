@@ -2,6 +2,14 @@ class ArgScanner
 
   def arg_scanner(string, word_to_search)
 
+    if word_to_search[0] == "-h"
+
+     return puts "Usage: notes [filter1] [filter2] [...]
+
+      Notes that are accessible from the command line."
+
+
+    end
     if word_to_search == []
       return puts string
     else
