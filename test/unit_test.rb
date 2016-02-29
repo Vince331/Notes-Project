@@ -1,10 +1,11 @@
-require 'Open3'
+#require 'Open3'
+require 'arg_scanner'
 gem 'minitest', '~> 5.2'
 
 # Add our bin directory to the PATH so that we can
 # run `notes` wiwthout specifying where to look.
-bin_dir     = File.expand_path('../../bin', __FILE__)
-ENV['PATH'] = bin_dir + ":" + ENV['PATH']
+#lib_dir     = File.expand_path('../../lib', __FILE__)
+#ENV['PATH'] = lib_dir + ":" + ENV['PATH']
 #stdout, stderr, exitstatus = Open3.capture3(bin_dir)
 
 class NotesTest < Minitest::Test
@@ -31,10 +32,12 @@ class NotesTest < Minitest::Test
 
   def test_it_treats_multiple_arguments_as_successive_filters_2
 
-    skip
+    test = ArgScanner.new
 
-    assert_match /Subtract 5 from 2    2 - 5  # => -3/, Notes.new("subtract")
 
+    assert_match "Add 1 to 2    1 + 2  # => 3", test.arg_scanner(['Add 1 to 2    1 + 2  # => 3'], ["add"])
+
+    assert_match 'Is 1 greater than or equal to 2    1 >= 2 # => 3' , test.arg_scanner(['Is 1 greater than or equal to 2    1 >= 2 # => 3'], ["greater",1])
 
 
 

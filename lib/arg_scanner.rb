@@ -2,29 +2,26 @@ class ArgScanner
 
   def arg_scanner(string, word_to_search)
 
-<<<<<<< HEAD
+
+
     if word_to_search[0] == "-h"
 
-     return puts "Usage: notes [filter1] [filter2] [...]
+     return "Usage: notes [filter1] [filter2] [...]
 
       Notes that are accessible from the command line."
 
 
-    end
-=======
-    if word_to_search[0] == '-h'
 
-      return puts "Usage : notes [filter1] [filter2] [...]
-
-      Notes that are accessible from the command line."
     end
 
->>>>>>> a13d850581e817a39d001324b0dd1cb2aac6294e
+
+
     if word_to_search == []
-      return puts string
+      return string
     else
       container1 = []
       container2 = []
+
       string.each do |sentence|
         if  sentence.scan(/.*#{word_to_search[0]}.*/i)  != []
             container1 << sentence
@@ -48,9 +45,12 @@ class ArgScanner
         j+=1
       end
 
-      return puts final
+      return final.join(",")
     else
-      return puts container1
+
+
+      return container1.join(",")
+
     end
   end
 

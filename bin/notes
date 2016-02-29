@@ -31,7 +31,8 @@ string = ['Add 1 to 2    1 + 2  # => 3',
 #    return match
 #  end
 #end
-ArgScanner.new.arg_scanner(string, word_to_search)
+test = ArgScanner.new.arg_scanner(string, word_to_search)
+puts test
 #hi = 3
 #def display_arg(thing)
 end
