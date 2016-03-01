@@ -2,15 +2,16 @@ require 'arg_scanner'
 
 class NotesTest < Minitest::Test
 
+
   def test_it_treats_multiple_arguments_as_successive_filters
-    stdout, stderr, exitstatus = Open3.capture3 'notes subtract from'
-    assert_match /Subtract 5 from 2    2 - 5  # => -3/ , stdout
+    test = ArgScanner.new
+    line_1 = 'Find out how big the array is    ["a","b"].length # => 2'
+    line_2 = 'Access an element in an array by its index    ["a","b","c"][0] # => "a"'
+    assert_match line_1 , test.arg_scanner([line_1], ["big"])
+    assert_match line_1 , test.arg_scanner([line_1,line_2], ["array"])
+    assert_match line_2 , test.arg_scanner([line_1,line_2], ["array"])
+    assert_match line_1 , test.arg_scanner([line_1,line_2], ["big", "array"])
   end
 
-  def test_it_treats_multiple_arguments_as_successive_filters_2
-    test = ArgScanner.new
-    assert_match "Add 1 to 2    1 + 2  # => 3", test.arg_scanner(['Add 1 to 2    1 + 2  # => 3'], ["add"])
-    assert_match 'Is 1 greater than or equal to 2    1 >= 2 # => 3' , test.arg_scanner(['Is 1 greater than or equal to 2    1 >= 2 # => 3'], ["greater",1])
-  end
 
 end

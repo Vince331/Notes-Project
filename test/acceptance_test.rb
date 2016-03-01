@@ -15,8 +15,7 @@ Convert 1 to a float    1.to_f # => 3
 Concatenate two arrays    [1,2] + [2, 3]   # => [1, 2, 2, 3]
 Remove elements in second array from first    [1,2,4] - [2, 3] # => [1,4]
 Access an element in an array by its index    ["a","b","c"][0] # => "a"
-Find out how big the array is    ["a","b"].length # => 2
-  '
+Find out how big the array is    ["a","b"].length # => 2'
 
   def test_first
     stdout, stderr, exitstatus = Open3.capture3 'notes'
