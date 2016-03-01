@@ -7,8 +7,8 @@ class ArgScanner
     elsif  things_to_search[0] == "-h"
 
       return "Usage: notes [filter1] [filter2] [...]\n" +
-      "\n" +
-      "Notes that are accessible from the command line."
+             "\n" +
+             "Notes that are accessible from the command line."
     else
       container1 = []
       container2 = []

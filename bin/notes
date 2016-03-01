@@ -4,8 +4,7 @@ $LOAD_PATH.unshift File.realdirpath '../../lib', __FILE__
 require 'arg_scanner'
 
 
-
-  word_to_search =  ARGV
+ things_to_search =  ARGV
 
   notes = ['Add 1 to 2    1 + 2  # => 3',
             'Subtract 5 from 2    2 - 5  # => -3',
@@ -20,5 +19,5 @@ require 'arg_scanner'
             'Access an element in an array by its index    ["a","b","c"][0] # => "a"',
             'Find out how big the array is    ["a","b"].length # => 2']
 
-  test = ArgScanner.new.arg_scanner(notes, word_to_search)
+  test = ArgScanner.new.arg_scanner(notes, things_to_search)
   puts test

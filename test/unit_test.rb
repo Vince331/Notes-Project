@@ -34,19 +34,16 @@ class NotesTest < Minitest::Test
   def test_for_robustness_by_testing_empty_selectors
 
     test = ArgScanner.new
-     line_1 = 'Is 1 less than 2    1 < 2  # => true'
-     assert_match line_1 , test.arg_scanner([line_1])
+    line_1 = 'Is 1 less than 2    1 < 2  # => true'
+    assert_match line_1 , test.arg_scanner([line_1])
   end
 
   def test_passing_minus_h_prints_a_description
     test = ArgScanner.new
 
     help = "Usage: notes [filter1] [filter2] [...]\n" +
-    "\n" +
-    "Notes that are accessible from the command line."
+      "\n" +
+      "Notes that are accessible from the command line."
     assert_match help , test.arg_scanner(["notes"], ["-h"])
   end
-
-
 end
-

@@ -1,7 +1,8 @@
-require 'Open3'
+require 'open3'
 
 bin_dir     = File.expand_path('../../bin', __FILE__)
 ENV['PATH'] = bin_dir + ":" + ENV['PATH']
+
 class NotesTest < Minitest::Test
 
   notes = 'Add 1 to 2    1 + 2  # => 3
@@ -21,5 +22,4 @@ Find out how big the array is    ["a","b"].length # => 2'
     stdout, stderr, exitstatus = Open3.capture3 'notes'
     assert_match /Add 1 to 2/ , stdout
   end
-
 end
