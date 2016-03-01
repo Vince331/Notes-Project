@@ -38,5 +38,15 @@ class NotesTest < Minitest::Test
      assert_match line_1 , test.arg_scanner([line_1])
   end
 
+  def test_passing_minus_h_prints_a_description
+    test = ArgScanner.new
+
+    help = "Usage: notes [filter1] [filter2] [...]\n" +
+    "\n" +
+    "Notes that are accessible from the command line."
+    assert_match help , test.arg_scanner(["notes"], ["-h"])
+  end
+
+
 end
 
