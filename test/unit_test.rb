@@ -31,11 +31,13 @@ class NotesTest < Minitest::Test
     assert_match line_1 , test.arg_scanner([line_1,line_2], ["big", "array"])
   end
 
-  def test_for_robustness_by_testing_empty_selectors
+  def test_it_selects_all_notes_by_default
 
     test = ArgScanner.new
-    line_1 = 'Is 1 less than 2    1 < 2  # => true'
-    assert_match line_1 , test.arg_scanner([line_1])
+    first_line = 'Is 1 less than 2    1 < 2  # => true'
+    last_line = 'Find out how big the array is    ["a","b"].length # => 2'
+    assert_match first_line , test.arg_scanner([first_line])
+    assert_match last_line , test.arg_scanner([last_line])
   end
 
   def test_passing_minus_h_prints_a_description

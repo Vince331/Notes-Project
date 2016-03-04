@@ -3,7 +3,7 @@ class ArgScanner
   def arg_scanner(notes, things_to_search = [])
 
     if things_to_search == []
-      return notes[0]
+      return notes.join("\n")
     elsif  things_to_search[0] == "-h"
 
       return "Usage: notes [filter1] [filter2] [...]\n" +
@@ -31,9 +31,9 @@ class ArgScanner
           final << x
         end
       end
-      return final.join(",")
+      return final.join("\n")
     else
-      return container1.join(",")
+      return container1.join("\n")
     end
   end
 end

@@ -18,7 +18,7 @@ Remove elements in second array from first    [1,2,4] - [2, 3] # => [1,4]
 Access an element in an array by its index    ["a","b","c"][0] # => "a"
 Find out how big the array is    ["a","b"].length # => 2'
 
-  def test_first
+  def test_makes_sure_the_notes_program_runs_from_the_command_line
     stdout, stderr, exitstatus = Open3.capture3 'notes'
     assert_match /Add 1 to 2/ , stdout
   end
